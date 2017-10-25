@@ -1,0 +1,108 @@
+/*-----------------------------------------------------------
+
+------------------------GENERAL STYLES
+
+------------------------------------------------------------*/
+
+* {
+	background-color: #282828;
+	color: white;
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+html {
+	height: 100%;
+}
+
+/*-----------------------------------------------------------
+
+------------------------HEADING
+
+For small screens, shift headline to stay inline with Minerva img, 
+creating a top-left nav frame.
+
+------------------------------------------------------------*/
+
+.audio-head {
+	text-align: center;
+	font-family: 'PT Serif', serif;
+	font-size: 2.3em;
+	letter-spacing: 1px;
+}
+
+#Minerva {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}
+
+/*-----------------------------------------------------------
+
+------------------------NAVIGATION
+
+------------------------------------------------------------*/
+
+.audio-nav {
+	margin-top: 0px;
+	margin-right: 40px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.audio-nav li {
+	font-size: 1.3em;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.audio-nav li:not(:first-child) {
+	margin-left: 10px;
+	background-color: #ad0000;
+	box-shadow: -3px 4px 2px #000000;
+}
+
+.audio-nav li a {
+	font-family: 'Droid Serif', serif;
+}
+
+/*-----------------------------------------------------------
+
+------------------------MEDIA QUERIES
+
+------------------------------------------------------------*/
+
+/* Nav breaks awkward at ~535px, switch to small column sidebar */
+@media (max-width: 535px) {
+	.audio-nav {
+		max-width: 90px;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-left: 0;
+		position: absolute;
+		top: 14px;
+		left: -40px;
+		z-index: 1;
+	}
+
+	.audio-nav li:not(:first-child) {
+		margin-top: 5px;
+		width: 10px;
+	}
+}
+
+
+
+
+
+

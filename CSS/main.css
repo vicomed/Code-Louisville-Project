@@ -1,9 +1,26 @@
 /*-----------------------------------------------------------
 
-------------------------MAIN CSS
+------------------------GENERAL STYLES
+
+NOTE: Use Serif fonts for headlines w/ black background, and Sans-serif for text;
+*Switched red color from #e50000 to #ad0000, true UofL red.*
+*Original background color: #282828*
 
 ------------------------------------------------------------*/
 
+* {
+	background-color: #272828;
+	color: #EEEEEE;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
 
 /*-----------------------------------------------------------
 
@@ -11,36 +28,255 @@
 
 ------------------------------------------------------------*/
 
+body {
+	margin: 0;
+	align-content: center;
+}
+
+header {
+	margin: 0 center;
+}
+
 /*-----------------------------------------------------------
 
-------------------------HEADER
+------------------------HEADING
+
+Need to work out issues with headline presentation.
 
 ------------------------------------------------------------*/
 
+.headline {
+	text-align: center;
+	font-family: 'PT Serif', serif;
+	letter-spacing: 1px;
+}
+
+.head-one {
+	margin-top: 25px;
+	margin-left: 5px;
+	margin-right: 5px;
+	font-size: 2.3em;
+}
+
+.head-two {
+	font-size: 2em;
+	padding-bottom: 23px;
+	border-bottom-style: solid;
+	border-width: 1px;
+	border-color: #ad0000;
+}
+
+#Minerva {
+	height: 75px;
+	width: 75px;
+	border-radius: 50%;
+}
+
+/*-----------------------------------------------------------
+
+------------------------NAVIGATION
+
+------------------------------------------------------------*/
+
+header {
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.nav-bar {
+	text-align: center;
+	/*margin-right: 40px;*/
+	font-size: 1.5em;
+	/*max-width: 82%;
+	margin-left: 6px;*/
+	margin-top: 30px;
+	margin-right: 40px;
+}
+
+.nav-bar li a {
+	font-family: 'Droid Serif', serif;
+	font-weight: bold;
+}
+
+.nav-bar li:not(:first-child) {
+	padding: 12px;
+	border-radius: 12px;
+	background-color: #ad0000;
+	/*box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);*/
+	box-shadow: -3px 4px 2px #000000;
+}
+
+/*
+.nav-bar li a {
+	text-decoration: none;
+	font-size: 1.5em;
+	background: linear-gradient( #cc4700, #561515);
+	margin-top: 1px;
+	margin-left: 10px;
+	padding: 10px;
+}
+*/
 /*-----------------------------------------------------------
 
 ------------------------COLUMNS
 
 ------------------------------------------------------------*/
 
+#coverIMG {
+	width: 82%;
+	max-width: 941px;
+	max-height: 289px;
+/*	height: 38vh;
+	min-height: 290px; */
+	margin: 0 auto;
 
+/*	 background-image: url("../Img/Class Guitar Bkgd.jpg");
+	background-repeat: no-repeat; */
+}
+
+#studioPortrait {
+	max-width: 100%;
+	max-height: 100%;
+	border-style: solid;
+	border-color: #EEEEEE;
+/*	border-color: #e50000;
+    border-width: 5px;	*/
+	border-radius: 10px;
+	box-sizing: border-box;
+
+}
+
+.intro-main {
+	font-family: 'Droid Serif', serif;
+	letter-spacing: 0.75px;
+}
+
+.par-one {
+	letter-spacing: 1px;
+}
+
+.col-one {
+	margin: 0 auto;
+	width: 85%;
+	max-width: 941px;
+	/*margin-left: 32px;
+	margin-right: 20px;*/
+}
 
 /*-----------------------------------------------------------
 
 ------------------------FOOTER
 
+Add social media icons: Facebook, Youtube, Google+, etc;
+
 ------------------------------------------------------------*/
+
+.main-foot {
+	margin-top: 20px;
+	margin-right: 10px;
+	/*margin-left: 32px;*/
+	
+	text-align: center;
+	/*display: flex;
+	flex-direction: row;
+	align-items: center;*/
+}
+
+.check-it {
+	letter-spacing: 0.5px;
+}
+
+#icon {
+	align-content: center;
+	margin-top: 20px;
+	margin-right: 30px;
+}
+
+
+.icon {
+	width: 60px;
+	height: 60px;
+}
+
+.google,
+.youtube {
+	margin-left: 5px;
+}
 
 /*-----------------------------------------------------------
 
 ------------------------MEDIA QUERIES
 
+Question to ask: Why do certain rules stay consistent through media queries unless 
+specified otherwise, while other rules do not cascade even if they are not overridden?
+Could flexbox be "restarting" the CSS already set for a selected element?
+
 ------------------------------------------------------------*/
 
+/* Display nav as list column for small screens */
+@media (max-width: 545px) {
+	.nav-bar li:not(:first-child) {
+		margin-top: 9px; 
+	}
 
+	#Minerva {
+		margin-bottom: 10px;
+	}
+}
 
+/* Display nav as flexible row for standard screens*/
+@media (min-width: 545px) {
+	.nav-bar {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		margin-top: -15px;
+		margin-right: 55px
 
+	}
 
+	.nav-bar li {
+		margin-left: 10px;
+	}
+
+	.nav-bar li a {
+		/*background: linear-gradient( #cc4700, #561515);*/
+		/*background-color: #e50000;*/
+		margin-top: 1px;
+		padding: 10px;
+	}
+}
+
+/* Margin for coverIMG on small screens */
+@media (max-width: 659px) {
+	#coverIMG {
+		margin: 27px auto 0;
+	}
+}
+
+/* Correct margin issues as nav bar unfolds*/
+@media (min-width: 765px) {
+	.photo-intro {
+		margin-top: -10px;
+	}	
+}
+
+/* Old rules to layout nav @1025px---
+@media (min-width: 1025px) {
+	.nav-bar li {
+		display: inline-block;
+	}
+	.main-nav a {
+		display: inline-block;
+		padding: 20px;
+		height: 50px;
+	}
+	#Minerva {
+		vertical-align: middle;
+	}
+}
+-------------------------------------*/
 
 
 
