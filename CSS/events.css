@@ -1,5 +1,291 @@
+/*-----------------------------------------------------------
+
+------------------------GENERAL STYLES
+
+------------------------------------------------------------*/
+
+/* All elements: blk bkgd, white text. */
 * {
 	background-color: #282828;
 	color: white;
+
+}
+
+/* All UL: no bullets. */
+ul {
+	list-style: none;
+}
+
+/* All UL/LI: 0 margin/padding. */
+ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+/* All links: no decoration. */
+a {
+	text-decoration: none;
+}
+
+/* All HTML: height 100%. */
+html {
+	height: 100%;
+}
+
+/* All body: center content/margin. */
+body {
+	margin: 0 auto;
+	align-content: center;
+}
+
+/*-----------------------------------------------------------
+
+------------------------HEADING
+
+------------------------------------------------------------*/
+
+/* Headline */
+.event-head {
+	/* Align: center. */
 	text-align: center;
+	font-family: 'PT Serif', serif;
+	font-size: 2.3em;
+	letter-spacing: 1px;
+}
+
+/* Nav Logo */
+#Minerva {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}
+
+/*-----------------------------------------------------------
+
+------------------------NAVIGATION
+
+------------------------------------------------------------*/
+
+/* Navigation */
+.audio-nav {
+	margin: 0 auto 25px;
+	margin-left: -13.5px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Nav list items */
+.audio-nav li {
+	font-size: 1.3em;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+/* Nav buttons */
+.audio-nav li:not(:first-child) {
+	margin-left: 10px;
+	background-color: #ad0000;
+	box-shadow: -3px 4px 2px #000000;
+}
+
+/* Nav links */
+.audio-nav li a {
+	font-family: 'Droid Serif', serif;
+}
+
+/*-----------------------------------------------------------
+
+------------------------CALENDAR
+
+------------------------------------------------------------*/
+#calendar {
+	border: 1px solid;
+	margin: 0 auto;
+}
+
+/* Month header */
+
+/* Make background of calendar header red */
+.month,
+.month ul,
+.month ul li,
+.month ul li span{
+	background-color: #ad0000;
+}
+
+.month {
+    padding: 70px 0px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month li {
+    color: white;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #EEE;
+    text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color:#EEE;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+}
+
+/* Month */
+
+/*.month {
+	font-family: 'PT Serif', serif;
+	font-size: 1.4em;
+	text-align: center;
+	padding: 30px;
+	border: 1px solid;
+}
+
+.month ul {
+	margin: 0;
+	padding: 0;
+}
+
+.month,
+.month li,
+.month li span {
+	background-color: #ad0000;
+}
+
+/* Weekdays */
+
+/*.weekdays {
+	margin: 0;
+	padding: 10px 0;
+}
+
+.weekdays,
+.weekdays li {
+	background-color: #888;
+}
+
+.weekdays li {
+	display: inline-block;
+	margin-top: 5px;
+	width: 13.6%;
+	text-align: center;
+
+}
+
+/* Days */
+
+/*.days {
+	padding: 10px 0;
+	margin: 0;
+}
+
+.days,
+.days li {
+	background-color: #EEE;
+	color: #282828;
+}
+
+.days li {
+	display: inline-block;
+	width: 13.6%;
+	text-align: center;
+}
+
+
+/*iframe {
+	max-width: 80%;
+	max-height: 80%;
+}*/
+
+/*-----------------------------------------------------------
+
+------------------------UPCOMING EVENTS
+
+------------------------------------------------------------*/
+
+#upcoming {
+	text-align: center;
+}
+
+/*-----------------------------------------------------------
+
+------------------------FOOTER
+
+Add social media icons: Facebook, Youtube, Google+, etc;
+
+------------------------------------------------------------*/
+
+.main-foot {
+	margin-top: 20px;
+	/*margin-right: 10px;
+	/*margin-left: 32px;*/
+	
+	text-align: center;
+	/*display: flex;
+	flex-direction: row;
+	align-items: center;*/
+}
+
+.check-it {
+	letter-spacing: 0.5px;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+#icon {
+	align-content: center;
+	margin-top: 20px;
+	/*margin-right: 30px;*/
+}
+
+
+.icon {
+	width: 60px;
+	height: 60px;
+}
+
+.google,
+.youtube {
+	margin-left: 5px;
 }

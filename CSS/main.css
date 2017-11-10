@@ -7,17 +7,21 @@ NOTE: Use Serif fonts for headlines w/ black background, and Sans-serif for text
 *Original background color: #282828*
 
 ------------------------------------------------------------*/
-
+/*  All items: bkgd charcoal.
+  	All text: color white.
+  	All font: Droid Sans.  */
 * {
 	background-color: #272828;
 	color: #EEEEEE;
 	font-family: 'Droid Sans', sans-serif;
 }
 
+/* All list items: no bullets */
 ul {
 	list-style: none;
 }
 
+/* All links: no underline */
 a {
 	text-decoration: none;
 }
@@ -28,13 +32,16 @@ a {
 
 ------------------------------------------------------------*/
 
+/*	All body: no margin.
+	All body: content center. */
 body {
 	margin: 0;
 	align-content: center;
 }
 
+/* All header: auto(centered) margin */
 header {
-	margin: 0 center;
+	margin: 0 auto;
 }
 
 /*-----------------------------------------------------------
@@ -42,6 +49,7 @@ header {
 ------------------------HEADING
 
 Need to work out issues with headline presentation.
+Work on issues with border below heading.
 
 ------------------------------------------------------------*/
 
@@ -51,19 +59,25 @@ Need to work out issues with headline presentation.
 	letter-spacing: 1px;
 }
 
+/* University of Louisville */
 .head-one {
 	margin-top: 25px;
-	margin-left: 5px;
 	margin-right: 5px;
 	font-size: 2.3em;
 }
 
+/* School of Music */
 .head-two {
+	font-size: 2.2em;
+}
+
+/* Classical Guitar Program */
+.head-three {
 	font-size: 2em;
 	padding-bottom: 23px;
-	border-bottom-style: solid;
+	/*border-bottom-style: solid;
 	border-width: 1px;
-	border-color: #ad0000;
+	border-color: #ad0000;*/
 }
 
 #Minerva {
@@ -76,33 +90,34 @@ Need to work out issues with headline presentation.
 
 ------------------------NAVIGATION
 
+	3D box shadow for white page
+	box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4)
+
 ------------------------------------------------------------*/
 
 header {
 	max-width: 90%;
-	margin: 0 auto;
 }
 
 .nav-bar {
 	text-align: center;
-	/*margin-right: 40px;*/
 	font-size: 1.5em;
-	/*max-width: 82%;
-	margin-left: 6px;*/
 	margin-top: 30px;
+	/* Correct nested list items indentation. */
 	margin-right: 40px;
 }
 
 .nav-bar li a {
 	font-family: 'Droid Serif', serif;
 	font-weight: bold;
+	padding: 30px;
 }
 
 .nav-bar li:not(:first-child) {
 	padding: 12px;
 	border-radius: 12px;
 	background-color: #ad0000;
-	/*box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);*/
+
 	box-shadow: -3px 4px 2px #000000;
 }
 
@@ -125,10 +140,12 @@ header {
 #coverIMG {
 	width: 82%;
 	max-width: 941px;
-	max-height: 289px;
+	max-height: 500px;
 /*	height: 38vh;
 	min-height: 290px; */
 	margin: 0 auto;
+	text-align: center;
+
 
 /*	 background-image: url("../Img/Class Guitar Bkgd.jpg");
 	background-repeat: no-repeat; */
@@ -194,8 +211,8 @@ Add social media icons: Facebook, Youtube, Google+, etc;
 
 
 .icon {
-	width: 60px;
-	height: 60px;
+	width: 55px;
+	height: 55px;
 }
 
 .google,
@@ -207,9 +224,7 @@ Add social media icons: Facebook, Youtube, Google+, etc;
 
 ------------------------MEDIA QUERIES
 
-Question to ask: Why do certain rules stay consistent through media queries unless 
-specified otherwise, while other rules do not cascade even if they are not overridden?
-Could flexbox be "restarting" the CSS already set for a selected element?
+Add new queries to get top two headlines in-line on appropriate screen size.
 
 ------------------------------------------------------------*/
 
@@ -241,8 +256,6 @@ Could flexbox be "restarting" the CSS already set for a selected element?
 	}
 
 	.nav-bar li a {
-		/*background: linear-gradient( #cc4700, #561515);*/
-		/*background-color: #e50000;*/
 		margin-top: 1px;
 		padding: 10px;
 	}
@@ -262,21 +275,61 @@ Could flexbox be "restarting" the CSS already set for a selected element?
 	}	
 }
 
-/* Old rules to layout nav @1025px---
-@media (min-width: 1025px) {
-	.nav-bar li {
-		display: inline-block;
+/* Applies to 850px and above */
+@media (min-width: 850px) {
+/* Unfold headlines on bigger screens */
+	#headerLine {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	/* Correct margin issues from default code */
+		margin-bottom: -20px;
 	}
-	.main-nav a {
-		display: inline-block;
-		padding: 20px;
-		height: 50px;
+
+	.head-one {
+
 	}
-	#Minerva {
-		vertical-align: middle;
+
+	.head-two {
+	/* Provide spacing between top two headlines */
+		margin-left: 15px;
+		padding-left: 17px;
+	/* Provide consistency between headlines sizes */
+		font-size: 2.3em;
+		border-left-style: solid;
+		border-color: black;
+		border-width: 5px;
 	}
 }
--------------------------------------*/
+
+/* Pull out header to fill horizontal div on larger screens */
+@media (min-width: 1300px) {
+	#headWrap {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom-style: solid;
+	}
+
+	.photo-intro {
+		margin-top: 40px;
+	}
+
+	#headliner {
+		margin-left: -50px;
+	}
+
+	.headline {
+		text-align: left;
+	}
+
+	nav {
+		margin-top: -50px;
+		margin-right: -90px;
+	}
+}
+
 
 
 

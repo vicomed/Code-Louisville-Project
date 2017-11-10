@@ -14,6 +14,12 @@ ul {
 	list-style: none;
 }
 
+ul, 
+li {
+	margin: 0;
+	padding: 0;
+}
+
 a {
 	text-decoration: none;
 }
@@ -51,8 +57,8 @@ creating a top-left nav frame.
 ------------------------------------------------------------*/
 
 .audio-nav {
-	margin-top: 0px;
-	margin-right: 40px;
+	margin-left: -13.5px;
+	margin-bottom: 25px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -78,12 +84,75 @@ creating a top-left nav frame.
 
 /*-----------------------------------------------------------
 
+------------------------RECORDINGS
+
+------------------------------------------------------------*/
+
+ul.recordings {
+	display: table;
+	margin: 0 auto;
+	/*max-width: 80%;*/
+}
+
+.recordings li {
+	border-style: solid;
+	min-height: 175px;
+}
+
+
+/*.recordings li > h2,
+.recordings li > img {
+	vertical-align: middle;
+}*/
+
+/*-----------------------------------------------------------
+
+------------------------FOOTER
+
+Add social media icons: Facebook, Youtube, Google+, etc;
+
+------------------------------------------------------------*/
+
+.main-foot {
+	margin-top: 20px;
+	/*margin-right: 10px;
+	/*margin-left: 32px;*/
+	
+	text-align: center;
+	/*display: flex;
+	flex-direction: row;
+	align-items: center;*/
+}
+
+.check-it {
+	letter-spacing: 0.5px;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+#icon {
+	align-content: center;
+	margin-top: 20px;
+}
+
+
+.icon {
+	width: 60px;
+	height: 60px;
+}
+
+.google,
+.youtube {
+	margin-left: 5px;
+}
+
+/*-----------------------------------------------------------
+
 ------------------------MEDIA QUERIES
 
 ------------------------------------------------------------*/
 
 /* Nav breaks awkward at ~535px, switch to small column sidebar */
-@media (max-width: 535px) {
+/*@media (max-width: 535px) {
 	.audio-nav {
 		max-width: 90px;
 		flex-direction: column;
@@ -93,13 +162,14 @@ creating a top-left nav frame.
 		top: 14px;
 		left: -40px;
 		z-index: 1;
+		border-style: solid;
 	}
 
 	.audio-nav li:not(:first-child) {
 		margin-top: 5px;
 		width: 10px;
 	}
-}
+}*/
 
 
 
