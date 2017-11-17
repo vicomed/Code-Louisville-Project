@@ -1,0 +1,320 @@
+
+/*-----------------------------------------------------------
+
+------------------------GENERAL STYLES
+
+------------------------------------------------------------*/
+
+* {
+	background-color: #282828;
+	color: #eee;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*-----------------------------------------------------------
+
+------------------------HEADING
+
+------------------------------------------------------------*/
+
+/* Headline */
+.alter-head {
+	text-align: center;
+	font-family: 'Quattrocento Sans', serif;
+	font-size: 2.4em;
+	letter-spacing: 1px;
+	margin: 30px auto 17px;
+}
+
+/* Nav Logo */
+#Minerva {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}
+
+/*-----------------------------------------------------------
+
+------------------------NAVIGATION
+
+------------------------------------------------------------*/
+
+/* Navigation */
+.alter-nav {
+	margin: 0 30px 25px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Nav list items */
+.alter-nav li {
+	font-size: 1.5em;
+	border-radius: 10px;
+	padding: 10px 8px;
+}
+
+/* Nav buttons */
+.alter-nav li:not(:first-child) {
+	margin-left: 10px;
+	background-color: #ad0000;
+	box-shadow: -3px 4px 2px #000000;
+}
+
+/* Nav links */
+.alter-nav li a {
+	font-family: 'Droid Serif', serif;
+	font-weight: bold;
+	padding: 5px;
+}
+
+/*-----------------------------------------------------------
+
+------------------------FOOTER
+
+------------------------------------------------------------*/
+
+.main-foot {
+	text-align: center;
+}
+
+.check-it {
+	letter-spacing: 0.5px;
+}
+
+#icon {
+	align-content: center;
+	margin-top: 20px;
+}
+
+
+.icon {
+	width: 55px;
+	height: 55px;
+}
+
+.google,
+.youtube {
+	margin-left: 5px;
+}
+
+/*-----------------------------------------------------------
+
+------------------------STICKY FOOTER
+
+------------------------------------------------------------*/
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#wrapper {
+  flex: 1 0 auto;
+}
+
+/*-----------------------------------------------------------
+
+ ====================== GALLERY PAGE ====================== 
+
+------------------------PHOTO GALLERY
+
+------------------------------------------------------------*/
+
+#gallery {
+	margin: 0 auto;
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+#gallery li {
+	flex: 1;
+}
+
+#gallery img {
+	border: 2px solid #ad0000;
+}
+
+/*-----------------------------------------------------------
+
+ ====================== GALLERY PAGE ======================
+
+------------------------MEDIA QUERIES
+
+------------------------------------------------------------*/
+
+@media (min-width: 807px) {
+	#gallery {
+		display: inline;
+	}
+
+	#gallery li {
+		float: left;
+		width: 25%;
+		flex-wrap: wrap;
+	}
+}
+
+/*-----------------------------------------------------------
+
+======================= AUDIO PAGE ========================
+
+------------------------RECORDINGS
+
+------------------------------------------------------------*/
+
+ul.recordings {
+	margin: 0 auto;
+	max-width: 80%
+}
+
+.recordings li {
+	border: 2px solid;
+	border-radius: 5px;
+	min-height: 175px;
+	margin-bottom: 10px;
+}
+
+.headSong {
+	padding: 0;
+	text-align: center;
+}
+
+.cover-wrap {
+	position: relative;
+}
+
+#cover0 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #888;
+}
+
+/*-----------------------------------------------------------
+
+======================= EVENTS PAGE ========================
+
+------------------------CALENDAR
+
+------------------------------------------------------------*/
+#calendar {
+	width: 80%;
+	min-width: 520px;
+	margin: 0 auto;
+	border: 1px solid;
+	border-radius: 5px;
+}
+
+/* Month header */
+
+/* Make background of calendar header red */
+.month,
+.month ul,
+.month ul li,
+.month ul li span{
+	background-color: #ad0000;
+}
+
+.month {
+    padding: 70px 0px;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px 5px 0px;
+
+}
+
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month li, .month span {
+    color: white;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Droid Serif', serif;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #EEE;
+    text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    display: inline-block;
+    padding: 5px 0;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color:#EEE;
+}
+
+.weekdays li, 
+.days li {
+	border-radius: 2.5px;
+}
+
+/*-----------------------------------------------------------
+
+======================= EVENTS PAGE ========================
+
+------------------------UPCOMING EVENTS
+
+------------------------------------------------------------*/
+
+#upcoming {
+	margin-top: 40px;
+	text-align: center;
+	font-family: 'Droid Serif';
+	font-size: 1.8em;
+}
+
+#GOTEM {
+	text-align: center;
+	font-size: 1.3em;
+}
+

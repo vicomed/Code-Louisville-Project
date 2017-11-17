@@ -3,16 +3,19 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Guitar | Audio</title>
+		<meta name="viewport" content="width=device-width, initial-scale-1">
 		<link rel="stylesheet" href="CSS/normalize.css">
-		<link rel="stylesheet" href="CSS/audio.css">
-		<link href="https://fonts.googleapis.com/css?family=PT+Serif:700i|Droid+Sans|Droid+Serif" rel="stylesheet">
+		<link rel="stylesheet" href="CSS/otherpages.css">
+		
+		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans|Droid+Sans|Droid+Serif" rel="stylesheet">
 	</head>
 	
 	<body>
+		<div id="wrapper">
 		<header>
-			<h1 class="audio-head">Audio Recordings</h1>
+			<h1 class="alter-head">Audio Recordings</h1>
 			<nav>
-				<ul class="audio-nav">
+				<ul class="alter-nav">
 					<li class='logo'><img id="Minerva" src='Img/UofL Emblem.gif' alt='University of Louisville Minerva in Red'></li>
 					<li><a href='index.html'>Home</a></li>
 					<li><a href='gallery.html'>Gallery</a></li>
@@ -21,28 +24,38 @@
 				</ul>
 			</nav>
 		</header>
+
 		<ul class="recordings">
 			<li>
-				<h2>Oops! Looks like this feature is under construction.</h2>
-				<img alt="mp3" src="">
+				<h2 class="headSong hs1"><a href='#'>Show Song One</a></h2>
+				<div class="cover-wrap">
+					<div id="cover"></div> 
+					<iframe class="playSong song1" width="100%" height="100%" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/32529450&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+				</div>
 			</li>
 			<li>
-				<h2>Oops! Looks like this feature is under construction.</h2>
-				<img alt="mp3" src="">
+				<h2 class="headSong hs2"><a href='#'>Show Song Two</a></h2>
+				<div class="cover-wrap">
+					<div class="cover"></div> 
+					<iframe class="playSong song2" width="100%" height="100%" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/32529450&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+					</div>
 			</li>
 			<li>
-				<h2>Oops! Looks like this feature is under construction.</h2>
-				<img alt="mp3" src="">
+				<h2 class="headSong hs3"><a href="#">Show Song Three</a></h2>
+				<div class="cover-wrap">
+					<div class="cover"></div> 
+					<iframe class="playSong song3" width="100%" height="100%" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/32529450&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+					</div>
 			</li>
 			<li>
-				<h2>Oops! Looks like this feature is under construction.</h2>
-				<img alt="mp3" src="">
-			</li>
-			<li>
-				<h2>Oops! Looks like this feature is under construction.</h2>
-				<img alt="mp3" src="">
+				<h2 class="headSong hs4"><a href="#">Show Song Four</a></h2>
+				<div class="cover-wrap">
+					<div class="cover"></div> 
+					<iframe class="playSong song4" width="100%" height="100%" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/32529450&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+				</div>
 			</li>	
 		</ul>
+	</div>
 		<footer class='main-foot'>
 			<p class="check-it">Check us out on social media!</p>
 			<ul id="icon">
@@ -51,5 +64,7 @@
 			<a href="http://www.googleplus.com"><img class="google icon" src="Img/g+.png" alt="Google Plus Icon"></a>
 			</ul>
 		</footer>
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="JS/audio.js"></script>
 	</body>
 </html>

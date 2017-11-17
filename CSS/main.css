@@ -3,15 +3,10 @@
 ------------------------GENERAL STYLES
 
 NOTE: Use Serif fonts for headlines w/ black background, and Sans-serif for text;
-*Switched red color from #e50000 to #ad0000, true UofL red.*
-*Original background color: #282828*
 
 ------------------------------------------------------------*/
-/*  All items: bkgd charcoal.
-  	All text: color white.
-  	All font: Droid Sans.  */
 * {
-	background-color: #272828;
+	background-color: #282828;
 	color: #EEEEEE;
 	font-family: 'Droid Sans', sans-serif;
 }
@@ -24,6 +19,30 @@ ul {
 /* All links: no underline */
 a {
 	text-decoration: none;
+}
+
+button,
+input[type="submit"] {
+	cursor: pointer;
+}
+
+/*-----------------------------------------------------------
+
+------------------------STICKY FOOTER
+
+------------------------------------------------------------*/
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#wrapper {
+  flex: 1 0 auto;
 }
 
 /*-----------------------------------------------------------
@@ -48,14 +67,11 @@ header {
 
 ------------------------HEADING
 
-Need to work out issues with headline presentation.
-Work on issues with border below heading.
-
 ------------------------------------------------------------*/
 
 .headline {
 	text-align: center;
-	font-family: 'PT Serif', serif;
+	font-family: 'Quattrocento Sans', serif;
 	letter-spacing: 1px;
 }
 
@@ -63,7 +79,7 @@ Work on issues with border below heading.
 .head-one {
 	margin-top: 25px;
 	margin-right: 5px;
-	font-size: 2.3em;
+	font-size: 2.4em;
 }
 
 /* School of Music */
@@ -73,11 +89,10 @@ Work on issues with border below heading.
 
 /* Classical Guitar Program */
 .head-three {
-	font-size: 2em;
+	font-size: 2.1em;
+	/* Need to adjust margins for bigger screens. */
 	padding-bottom: 23px;
-	/*border-bottom-style: solid;
-	border-width: 1px;
-	border-color: #ad0000;*/
+	border-bottom: 1px solid #ad0000;
 }
 
 #Minerva {
@@ -97,12 +112,12 @@ Work on issues with border below heading.
 
 header {
 	max-width: 90%;
+	border-bottom: 1px solid #ad0000;
 }
 
 .nav-bar {
 	text-align: center;
 	font-size: 1.5em;
-	margin-top: 30px;
 	/* Correct nested list items indentation. */
 	margin-right: 40px;
 }
@@ -117,23 +132,12 @@ header {
 	padding: 12px;
 	border-radius: 12px;
 	background-color: #ad0000;
-
 	box-shadow: -3px 4px 2px #000000;
 }
 
-/*
-.nav-bar li a {
-	text-decoration: none;
-	font-size: 1.5em;
-	background: linear-gradient( #cc4700, #561515);
-	margin-top: 1px;
-	margin-left: 10px;
-	padding: 10px;
-}
-*/
 /*-----------------------------------------------------------
 
-------------------------COLUMNS
+------------------------IMAGE
 
 ------------------------------------------------------------*/
 
@@ -145,10 +149,6 @@ header {
 	min-height: 290px; */
 	margin: 0 auto;
 	text-align: center;
-
-
-/*	 background-image: url("../Img/Class Guitar Bkgd.jpg");
-	background-repeat: no-repeat; */
 }
 
 #studioPortrait {
@@ -156,28 +156,115 @@ header {
 	max-height: 100%;
 	border-style: solid;
 	border-color: #EEEEEE;
-/*	border-color: #e50000;
-    border-width: 5px;	*/
 	border-radius: 10px;
 	box-sizing: border-box;
 
 }
 
-.intro-main {
+/*-----------------------------------------------------------
+
+------------------------COLUMNS
+
+------------------------------------------------------------*/
+.parhead1 {
+	text-align: center;
+}
+
+.parhead {
 	font-family: 'Droid Serif', serif;
 	letter-spacing: 0.75px;
 }
 
-.par-one {
+.par {
 	letter-spacing: 1px;
 }
 
-.col-one {
+.col {
 	margin: 0 auto;
-	width: 85%;
+	width: 82%;
+	/* Only necessary if no break in larger screens*/
 	max-width: 941px;
-	/*margin-left: 32px;
-	margin-right: 20px;*/
+}
+
+/*-----------------------------------------------------------
+
+------------------------CONTACT FORM
+
+------------------------------------------------------------*/
+
+/* Entire form div */
+div #contactBox {
+	margin: 38px auto 0;
+	text-align: center;
+}
+
+/* Contact Us Btn */
+.contactBox {
+	font-size: 25px;
+	margin-bottom: 20px;
+	padding: 15px;
+	background-color: #ad0000;	
+	border-color: #272828;
+	box-shadow: 0px 3px 2px #000;
+}
+
+/* Hide Form Btn */
+.hide1 {
+	margin-bottom: 5px;
+	font-size: 18px;
+	padding: 15px;
+	background-color: #cc2300;
+	color: #EEE;
+}
+
+/* Contact & Hide Btns */
+.cont-btn {
+	border-radius: 8px;
+	border-color: #272828;
+	box-shadow: 0px 3px 2px #000;
+}
+
+/* Form itself */
+div #contactForm {
+	margin: 0 auto 20px;
+	padding: 5px;
+	width: 80%;
+	height: 100%;
+	text-align: center;
+	border: 1px solid #eee;
+	border-radius: 6px;
+	box-shadow: 0 0 15px #000;
+}
+
+/* All: Text Input */
+input[type="text"] {
+	width: 100%;
+	margin-bottom: 10px;
+	height: 35px;
+}
+
+/* All: Submit Input */
+input[type="submit"] {
+	width: 100%;
+	margin-bottom: 5px;
+	padding: 10px 45px;
+	border: none;
+	background-color: #cc0043;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+/* All: Textarea */
+textarea {
+	width: 96%;
+	margin: 5px auto;
+	height: 100px;
+	padding: 10px;
+	border: 2px solid #eee;
+}
+
+label {
+	float: left;
 }
 
 /*-----------------------------------------------------------
@@ -189,14 +276,9 @@ Add social media icons: Facebook, Youtube, Google+, etc;
 ------------------------------------------------------------*/
 
 .main-foot {
-	margin-top: 20px;
 	margin-right: 10px;
-	/*margin-left: 32px;*/
-	
+	/*margin-left: 32px;*/	
 	text-align: center;
-	/*display: flex;
-	flex-direction: row;
-	align-items: center;*/
 }
 
 .check-it {
@@ -204,11 +286,9 @@ Add social media icons: Facebook, Youtube, Google+, etc;
 }
 
 #icon {
-	align-content: center;
 	margin-top: 20px;
-	margin-right: 30px;
+	margin-right: 30px
 }
-
 
 .icon {
 	width: 55px;
@@ -286,52 +366,20 @@ Add new queries to get top two headlines in-line on appropriate screen size.
 		margin-bottom: -20px;
 	}
 
-	.head-one {
-
-	}
-
 	.head-two {
 	/* Provide spacing between top two headlines */
 		margin-left: 15px;
 		padding-left: 17px;
 	/* Provide consistency between headlines sizes */
 		font-size: 2.3em;
-		border-left-style: solid;
-		border-color: black;
-		border-width: 5px;
+		border-left: 5px solid #EEE;
+	}
+
+	.head-three {
+		border-style: none;
+		padding-bottom: 5px;
 	}
 }
-
-/* Pull out header to fill horizontal div on larger screens */
-@media (min-width: 1300px) {
-	#headWrap {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		border-bottom-style: solid;
-	}
-
-	.photo-intro {
-		margin-top: 40px;
-	}
-
-	#headliner {
-		margin-left: -50px;
-	}
-
-	.headline {
-		text-align: left;
-	}
-
-	nav {
-		margin-top: -50px;
-		margin-right: -90px;
-	}
-}
-
-
-
 
 
 
